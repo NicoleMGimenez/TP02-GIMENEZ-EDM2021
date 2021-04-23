@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="UTF-8">
-<title>Producto</title>
+	<meta charset="UTF-8">
+	<title>Producto</title>
 </head>
+
 <body>
 
 	<h1>Formulario de Carga de Producto</h1>
 	<form id="formProducto" th:object="${unProducto}" th:action="${producto}" method="post">
-		
-			<label for="codigo">Codigo</label> 
-			<input type="text"	id="codigo" th:field="*{codProducto}">
+
+		<label for="codigo">Codigo</label>
+		<input type="text" id="codigo" th:field="*{codProducto}">
 		<br>
-		
-			<label for="nombre">Nombre</label> 
-			<input type="text"	id="nombre" th:field="*{nombre}">
+
+		<label for="nombre">Nombre</label>
+		<input type="text" id="nombre" th:field="*{nombre}">
 		<br>
-		    <label for="precio">Precio</label> 
-			<input type="number" id="precio" th:field="*{precio}">
+		<label for="precio">Precio</label>
+		<input type="number" id="precio" th:field="*{precio}">
 		<br>
-		
-			<label for="marca">Marca</label> 
-			<input type="text" id="marca" th:field="*{marca}">		
+
+		<label for="marca">Marca</label>
+		<input type="text" id="marca" th:field="*{marca}">
 		<br>
-		
-			<label for="stock">Stock</label> 
-			<input type="number" id="stock" th:field="*{stock}">
+
+		<label for="stock">Stock</label>
+		<input type="number" id="stock" th:field="*{stock}">
 		<br>
 
 		<div>

@@ -37,6 +37,14 @@ public class ProductoController {
 		model.addAttribute("ultimoProducto", productoService.obtenerUltimoProducto());
 		return("mostrar-ultimo");
 	}
+	
+	@GetMapping("/todos")
+	public String mostrarTodosProductos(Model model) {
+		model.addAttribute("todosProductos", productoService.obtenerTodosProductos());
+		System.out.println(productoService.obtenerTodosProductos().get(0).getMarca());
+		model.addAttribute("productos", productoService.obtenerTodosProductos());
+		return("mostrar-todos");
+	}	
 
 	@GetMapping("/volver")
 	public String cargarNuevoProducto(Model model) {
